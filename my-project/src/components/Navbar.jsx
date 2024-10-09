@@ -50,7 +50,7 @@ const Navbar = () => {
       <nav
         className={` py-4 lg:px-14 px-4 ${
           isSticky
-            ? "sticky top-0 left-0 right-0 border-b bg-white duration-300"
+            ? "sticky top-0 left-0 right-0 border bg-white duration-300"
             : ""
         }`}
       >
@@ -111,7 +111,11 @@ const Navbar = () => {
           </div>
         </div>
         {/* mobile menu nav items*/}
-        <div className={`space-y-4 px-4 mt-16 py-7 bg-brandPrimary ${isMenuOpen ? "block fixed top-0 left-0 right-0" : "hidden"}`}>
+        <div
+          className={`space-y-4 px-4 mt-16 py-7 bg-brandPrimary ${
+            isMenuOpen ? "block fixed top-0 left-0 right-0" : "hidden"
+          }`}
+        >
           {navItems.map(({ link, path }) => (
             <Link
               key={path}
