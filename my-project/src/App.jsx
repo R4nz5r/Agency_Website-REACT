@@ -5,6 +5,8 @@ import "./App.css"
 import Services from "./components/Services";
 import About from "./components/About";
 import Products from "./components/Products";
+import Blogs from "./components/Blogs";
+import Newsletter from "./components/Newsletter";
 
 const App = () => {
   return (
@@ -15,6 +17,8 @@ const App = () => {
       <Services/>
       <About/>
       <Products/>
+      <Blogs/>
+      <Newsletter/>
     </BrowserRouter>
   );
 };
