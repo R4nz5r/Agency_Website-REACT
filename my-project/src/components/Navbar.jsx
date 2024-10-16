@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import logo from "../assets/logo.png";
+import { FiAperture } from "react-icons/fi";
 import { Link } from "react-scroll";
 
 // React Icons
@@ -33,12 +33,12 @@ const Navbar = () => {
 
   // navItems array
   const navItems = [
-    { link: "Home", path: "/home" },
-    { link: "Service", path: "/service" },
-    { link: "About", path: "/about" },
-    { link: "Product", path: "/product" },
-    { link: "Testimonial", path: "/testimonial" },
-    { link: "FAQ", path: "/faq" },
+    { link: "Home", path: "home" },
+    { link: "Service", path: "service" },
+    { link: "About", path: "about" },
+    { link: "Product", path: "product" },
+    { link: "Testimonial", path: "testimonial" },
+    { link: "FAQ", path: "faq" },
   ];
 
   return (
@@ -59,11 +59,8 @@ const Navbar = () => {
             href="/"
             className="text-2xl font-semibold flex items-center space-x-3"
           >
-            <img
-              src={logo}
-              alt="logo"
-              className="w-10 inline-block items-center"
-            />
+            <FiAperture className="h-10 w-20 inline-block items-center text-brandPrimary"/>
+            
             <span className="text-[#263238]">NEXXENT</span>
           </a>
 
@@ -76,7 +73,7 @@ const Navbar = () => {
                 spy={true}
                 smooth={true}
                 offset={-100}
-                className="block text-base text-gray-900 hover:text-brandPrimary first:font-medium"
+                className="block text-base cursor-pointer text-gray-900 hover:text-brandPrimary first:font-medium"
               >
                 {link}
               </Link>
